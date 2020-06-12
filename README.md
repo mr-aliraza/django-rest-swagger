@@ -51,7 +51,7 @@ urlpatterns = [
 ```
 
 ## Requirements
-* Django 1.2+
+* Django 2.2+
 * Django REST framework 3.5.1+
 * Python 2.7, 3.5, 3.6, 3.7, 3.8
 

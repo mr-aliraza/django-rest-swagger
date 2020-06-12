@@ -1,4 +1,4 @@
-from django.conf.urls import url, include
+from django.urls import re_path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework_swagger.views import get_swagger_view
 
@@ -12,7 +12,7 @@ router.register(r'users', views.UserViewSet)
 schema_view = get_swagger_view(title='Snippets API')
 
 urlpatterns = [
-    url('^$', schema_view),
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    re_path('^$', schema_view),
+    re_path(r'^', include(router.urls)),
+    re_path(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

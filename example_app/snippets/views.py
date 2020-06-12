@@ -4,9 +4,9 @@ from rest_framework import renderers
 from rest_framework import viewsets
 from rest_framework.decorators import detail_route
 from rest_framework.response import Response
-from snippets.models import Snippet
-from snippets.permissions import IsOwnerOrReadOnly
-from snippets.serializers import SnippetSerializer, UserSerializer
+from .models import Snippet
+from .permissions import IsOwnerOrReadOnly
+from .serializers import SnippetSerializer, UserSerializer
 
 
 class SnippetViewSet(viewsets.ModelViewSet):
